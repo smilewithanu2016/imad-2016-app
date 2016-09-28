@@ -16,9 +16,9 @@ body {
     font-weight: bold;
 }
 
-/*.img-medium {
+.img-medium {
     height: 200px;
-}*/
+}
 .center1 {
     margin: auto;
     border: 2px solid #73AD21;
