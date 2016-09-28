@@ -33,7 +33,7 @@ body {
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
     animation-name: example;
-    animation-duration: 4s;
+    animation-duration: 7s;
 }
 
 @-webkit-keyframes example {
