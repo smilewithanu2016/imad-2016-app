@@ -9,7 +9,7 @@ body {
 }
 
 .text-big {
-    font-size: 300%;
+    font-size: 200%;
 }
 
 .bold {
@@ -26,8 +26,9 @@ body {
     padding: 10px;
     text-align: center;
     color: green;
-       width: 100px;
+       width: 200px;
     height: 50px;
+    font-weight: bold;
     background-color: lightgreen;
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
