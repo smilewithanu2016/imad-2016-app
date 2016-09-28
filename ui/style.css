@@ -37,13 +37,13 @@ body {
 }
 
 @-webkit-keyframes example {
-    from {background-color: red;}
+    from {background-color: lightblue;}
     to {background-color: yellow;}
 }
 
 
 /* Standard syntax */
 @keyframes example {
-    from {background-color: red;}
+    from {background-color: lightblue;}
     to {background-color: yellow;}
 }
