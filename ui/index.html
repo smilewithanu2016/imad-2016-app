@@ -75,7 +75,17 @@
             <li>Jenzabar experience</li>
             </ul>
       </p>
-      <p><h4><u>My LinkedIn Profile</u></h4><a href="www.linkedin.com/in/smilewithanu2016">Click Here</a></p>
+       <button onclick="myFunction()"><h4><u>My LinkedIn Profile</u></h4></button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    var str = "My LinkedIn Profile";
+    var result = str.link("www.linkedin.com/in/smilewithanu2016");
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
     </div>
     
    </div></div>    </div>
