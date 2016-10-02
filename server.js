@@ -25,8 +25,8 @@ app.get('/ui/bg.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg.jpg'));
 });
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '', 'www.linkedin.com/in/smilewithanu2016'));
 });
 
 
