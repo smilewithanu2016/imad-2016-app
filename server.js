@@ -29,19 +29,19 @@ app.get('/ui/Home.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Home.html'));
 });
 
-app.get('/ui/About.html', function (req, res) {
+app.get('/About.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'About.html'));
 });
 
-app.get('/ui/Contact.html', function (req, res) {
+app.get('/Contact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Contact.html'));
 });
 
-app.get('/ui/Signup.html', function (req, res) {
+app.get('/Signup.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Signup.html'));
 });
 
-app.get('/ui/Login.html', function (req, res) {
+app.get('/Login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Login.html'));
 });
 
