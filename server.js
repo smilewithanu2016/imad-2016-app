@@ -26,7 +26,7 @@ app.get('/ui/bg.jpg', function (req, res) {
 });
 
 
-app.get('/', function(req, res) {
+app.get('https://www.linkedin.com/in/smilewithanu2016', function(req, res) {
    res.redirect('https://www.linkedin.com/in/smilewithanu2016');
 });
 
