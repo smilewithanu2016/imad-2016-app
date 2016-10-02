@@ -26,9 +26,6 @@ app.get('/ui/bg.jpg', function (req, res) {
 });
 
 
-app.get('https://www.linkedin.com/in/smilewithanu2016', function(req, res) {
-   res.redirect('https://www.linkedin.com/in/smilewithanu2016');
-});
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
