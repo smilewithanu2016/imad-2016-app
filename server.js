@@ -29,7 +29,7 @@ app.get('/ui/Home.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Home.html'));
 });
 
-app.get('ui/About.html', function (req, res) {
+app.get('/ui/About.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'About.html'));
 });
 
