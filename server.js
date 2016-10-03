@@ -33,15 +33,15 @@ app.get('/ui/About.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'About.html'));
 });
 
-app.get('ui/Contact.html', function (req, res) {
+app.get('/ui/Contact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Contact.html'));
 });
 
-app.get('ui/Signup.html', function (req, res) {
+app.get('/ui/Signup.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Signup.html'));
 });
 
-app.get('ui/Login.html', function (req, res) {
+app.get('/ui/Login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Login.html'));
 });
 
