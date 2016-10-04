@@ -60,11 +60,22 @@ body {
 <div class="form-group">
  <div class="col-xs-8">
 <p>
-     <button type="button" class="btn btn-primary" id="searchbtn">
-    <span class="glyphicon glyphicon-search"></span> Search
-  </button>
-     <textarea rows="2" class="form-control" id="searchbtn"></textarea>
-         
+        <form id="searchbox" action="">
+    <input id="search" type="text" placeholder="Search this site">
+    <input id="submit" type="submit" value="Search">
+</form>
+     <script>
+  (function() {
+    var cx = '017405939287033863176:7r-oksn3oby';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<gcse:search></gcse:search>    
          
    <h2>Categories</h2>
     <ul class="nav nav-tabs">
