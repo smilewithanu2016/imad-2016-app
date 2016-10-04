@@ -100,8 +100,8 @@ app.get('/ui/Login.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Login.html'));
 });
 
-app.get('/ui/Home Decor.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'Home Decor.html'));
+app.get('/ui/HomeDecor.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'HomeDecor.html'));
 });
 
 app.get('/ui/Baby.html', function (req, res) {
