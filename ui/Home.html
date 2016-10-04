@@ -11,14 +11,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-<form name="cse" id="searchbox_demo" action="https://www.google.com/cse">
-  <input type="hidden" name="cref" value="" />
-  <input type="hidden" name="ie" value="utf-8" />
-  <input type="hidden" name="hl" value="" />
-  <input name="q" type="text" size="40" />
-  <input type="submit" name="sa" value="Search" />
-</form>
-<script type="text/javascript" src="https%3A%2F%2Fcse.google.com%2Fcse/tools/onthefly?form=searchbox_demo&lang="></script>
+
 <title>Easykart</title>
 <style>
 ul#menu {
@@ -49,7 +42,7 @@ body {
 </head>
 
 <body>
-   
+    
 
 
 <div class="container">
@@ -64,31 +57,17 @@ body {
   <li><a href="Signup.html">SignUp</a></li>
   <li><a href="Login.html">LogIn</a></li>
 </ul>  
-
-</div>
-<div>
-     <script>
-  (function() {
-    var cx = '017405939287033863176:7r-oksn3oby';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
-    <p>
+<div class="form-group">
+ <div class="col-xs-8">
+<p>
      <button type="button" class="btn btn-primary" id="searchbtn">
-    <span class="glyphicon glyphicon-search"></span> Search in this site
+    <span class="glyphicon glyphicon-search"></span> Search
   </button>
      <textarea rows="2" class="form-control" id="searchbtn"></textarea>
-         
- </p>
-    
+     </p>
 </div>
-<div>
+</div>
+  <div>       
    <h2>Categories</h2>
     <ul class="nav nav-tabs">
   <li><a href="HomeDecor.html">HomeDecor</a></li>
@@ -99,18 +78,15 @@ body {
   <li><a href="Books.html">Books & Stationaries</a></li>
   <li><a href="Misc.html">Misc Products</a></li>
 </ul>  
-  
-</div>
-<div>
+  </div>
 
-<footer><i><small>@Registered</small></i><h6>All Rights Reserved<h6></footer>
-</div>
-<p id="demo"></p>
-
+<p id="demo">
 <script>
 document.getElementById("demo").innerHTML = Date();
-
 </script>
+</p>
+<footer><i><small>@Registered</small></i><h6>All Rights Reserved</h6></footer>
+</div>
 
 <script type="text/javascript" src="/ui/main.js">
         </script>
