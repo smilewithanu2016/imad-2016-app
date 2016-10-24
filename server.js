@@ -20,7 +20,9 @@ app.get('/ui/pic.jpg', function (req, res) {
 app.get('/ui/Logo.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Logo.jpg'));
 });
-
+app.get('/ui/bloglogo.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloglogo.jpg'));
+});
 app.get('/ui/bg.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg.jpg'));
 });
