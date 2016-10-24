@@ -37,10 +37,10 @@ body {
     height: 75px;
     font-weight: bold;
     background-color: lightgreen;
-    -webkit-animation-name: example;
-    -webkit-animation-duration: 4s;
-    animation-name: example;
-    animation-duration: 7s;
+    /*-webkit-animation-name: example;
+    /*-webkit-animation-duration: 4s;
+    /*animation-name: example;
+   /* animation-duration: 7s;
 }
 
 @-webkit-keyframes example {
