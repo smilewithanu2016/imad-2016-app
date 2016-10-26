@@ -130,6 +130,38 @@ app.get('/ui/Misc.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Misc.html'));
 });
 
+app.get('/ui/bloghome.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloghome.html'));
+});
+app.get('/ui/blogcontact.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogcontact.html'));
+});
+
+app.get('/ui/blogsignup.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogsignup.html'));
+});
+
+app.get('/ui/bloglogin.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloglogin.html'));
+});
+
+app.get('/ui/bloghomeimprovement.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloghomeimprovement.html'));
+});
+app.get('/ui/blogjobs.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogjobs.html'));
+});
+app.get('/ui/blogkids.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogkids.html'));
+});
+app.get('/ui/blogkitchen.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'blogkitchen.html'));
+});
+app.get('/ui/bloggeneral.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloggeneral.html'));
+});
+
+
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
   console.log(`IMAD course app listening on port ${port}!`);
