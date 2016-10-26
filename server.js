@@ -30,6 +30,9 @@ app.get('/ui/bg.jpg', function (req, res) {
 app.get('/ui/Home.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Home.html'));
 });
+app.get('/ui/bloghome.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bloghome.html'));
+});
 
 app.get('/ui/hd1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'hd1.jpg'));
@@ -130,9 +133,11 @@ app.get('/ui/Misc.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Misc.html'));
 });
 
+
 app.get('/ui/bloghome.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bloghome.html'));
 });
+
 app.get('/ui/blogcontact.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'blogcontact.html'));
 });
