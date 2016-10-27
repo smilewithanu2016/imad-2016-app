@@ -7,7 +7,7 @@ var app = express();
 app.use(morgan('combined'));
 
 var config = {
-  host: 'db.imad.hasura-app-io',
+  host: 'db.imad.hasura-app.io',
   user: 'smilewithanu2016',
   password: 'db-smilewithanu2016-62200',
   database: 'smilewithanu2016',
