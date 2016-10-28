@@ -14,6 +14,9 @@ var config = {
   port: '5432'
 };
 
+var pool = new Pool(config);
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
@@ -174,8 +177,6 @@ app.get('/ui/blogkitchen.html', function (req, res) {
 app.get('/ui/bloggeneral.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bloggeneral.html'));
 });
-
-var pool = new Pool(config);
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
