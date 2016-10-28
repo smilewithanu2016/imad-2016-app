@@ -178,6 +178,17 @@ app.get('/ui/bloggeneral.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bloggeneral.html'));
 });
 
+app.get('/ui/blogsignup.html', function (req, res) {
+  if (err) return onError(err);
+ pool.query("insert into signup (name,number,email,dob,password,gender,userid) "+"values ('"+req.query.name+"',
+ '"+req.query.number+"','"+req.query.email+"','"+req.query.dob+"','"+req.query.password+"','"+req.query.gender+"','"+req.query.userid+"')"),function(err,result){
+if(err){
+res.status(500).send(err.toString());
+}else{
+res.send(JSON.stringify(result));
+}
+});
+
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
