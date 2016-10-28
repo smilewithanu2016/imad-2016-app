@@ -177,8 +177,7 @@ app.get('/ui/bloggeneral.html', function (req, res) {
 
 var pool = new Pool(config);
 app.get('/ui/blogsignup.html', function (req, res) {
-  
-    if (err) return onError(err);
+  if (err) return onError(err);
  pool.query("insert into signup (name,number,number,email,dob,password,gender,userid) "+"values ('"+req.query.name+"',
  '"+req.query.number+"','"+req.query.email+"','"+req.query.dob+"','"+req.query.password+"','"+req.query.gender+"','"+req.query.userid+"')"),function(err,result){
 if(err){
