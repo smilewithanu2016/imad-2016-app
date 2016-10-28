@@ -14,9 +14,11 @@ var config = {
   port: '5432'
 };
 var pool = new Pool(config);
-
-app.get('/signup', function (req, res) {
- pool.query('SELECT * FROM signup',function(err,result){
+app.get('/ui/blogsignup.html', function (req, res) {
+  
+    if (err) return onError(err);
+ pool.query(("insert into signup (name,number,number,email,dob,password,gender,userid) "+"values ('"+req.query.name+"','"+req.query.number+"',
+  '"+req.query.email+"','"+req.query.dob+"','"+req.query.password+"','"+req.query.gender+"','"+req.query.userid+"')"),function(err,result){
 if(err){
 res.status(500).send(err.toString());
 }else{
@@ -24,7 +26,6 @@ res.send(JSON.stringify(result));
 }
 });
 });
-
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
