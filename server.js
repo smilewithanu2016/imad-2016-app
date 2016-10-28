@@ -7,9 +7,9 @@ var app = express();
 app.use(morgan('combined'));
 
 var config = {
-  host: 'db.imad.hasura-app.io',
+  host: 'PostgreSQL 9.6',
   user: 'smilewithanu2016',
-  password: 'db-smilewithanu2016-62200',
+  password: 'sa',
   database: 'smilewithanu2016',
   port: '5432'
 };
