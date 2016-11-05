@@ -10,7 +10,7 @@ app.use(morgan('combined'));
 var config = {
   host: 'PostgreSQL 9.6',
   user: 'smilewithanu2016',
-  password: 'sa',
+  password: 'db-smilewithanu2016-62200',
   database: 'smilewithanu2016',
   port: '5432'
 };
