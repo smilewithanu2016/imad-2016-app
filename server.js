@@ -2,6 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
+var crypto = require('crypto');
 
 var app = express();
 app.use(morgan('combined'));
@@ -15,6 +16,39 @@ var config = {
 };
 
 var pool = new Pool(config);
+
+function hash (input,salt)
+{
+var hashed = crypto.pbkdf2Sync(input,salt,10000,512,'anu');
+return ["pbkdf2","10000",salt.hashed.toString('hex')].join('$');
+}
+
+app.get('/hash/:input',function(req,res){
+var hashedString = hash(req.params.input,'this is a random string');
+res.send(hashedString);
+});
+
+app.post('/ui/blogsignup.html', function (req, res) {
+var name = req.body.name;
+var number = req.body.number;
+var email = req.body.email;
+var dob = req.body.dob;
+var password = req.body.password;
+var gender = req.body.gender;
+var userid = req.body.userid;
+var salt =  crypto.randomBytes(128).toString('hex');
+var dbString= hash(password,salt);
+
+pool.query("INSERT INTO 'signup' (name,number,email,dob,password,gender,userid) VALUES ($1,$2,$3,$4,$5,$6,$7)",[name,dbString],function(err,result){
+if(err){
+res.status(500),send(err.toString());
+}else {
+res.send('User created successfully :' +name);
+}
+});
+});
+
+
 
 
 app.get('/', function (req, res) {
