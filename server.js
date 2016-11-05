@@ -29,6 +29,10 @@ app.get('/ui/pic.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'pic.jpg'));
 });
 
+app.get('/ui/Anuradha_Balasubramaniam_IITResume.doc', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Anuradha_Balasubramaniam_IITResume.doc'));
+});
+
 app.get('/ui/Logo.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Logo.jpg'));
 });
