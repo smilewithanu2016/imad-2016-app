@@ -3,9 +3,11 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
+var bodyParser = require('body-parser');
 
 var app = express();
 app.use(morgan('combined'));
+app.use(body-parser.json());
 
 var config = {
   host: 'PostgreSQL 9.6',
@@ -39,7 +41,7 @@ var userid = req.body.userid;
 var salt =  crypto.randomBytes(128).toString('hex');
 var dbString= hash(password,salt);
 
-pool.query("INSERT INTO 'signup' (name,number,email,dob,password,gender,userid) VALUES ($1,$2,$3,$4,$5,$6,$7)",[name,dbString],function(err,result){
+pool.query("INSERT INTO 'signup' (name,number,email,dob,password,gender,userid) VALUES ($1,$2,$3,$4,$5,$6,$7)",[name,number,email,dob,dbString,gender,userid],function(err,result){
 if(err){
 res.status(500),send(err.toString());
 }else {
