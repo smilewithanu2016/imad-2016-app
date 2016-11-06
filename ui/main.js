@@ -16,9 +16,9 @@ alert ("Something went wrong with the server");
 }
 };
 
-var name = document.getElementById('name').value;
+var name = document.getElementById('userid').value;
 var password = document.getElementById('password').value;
-request.open('POST','http://smilewithanu2016.imad.hasura-app.io/ui/blogsignup.html',true);
+request.open('POST','http://smilewithanu2016.imad.hasura-app.io/ui/bloglogin.html',true);
 request.setRequestHeader('Content-Type','application/json');
-request.send(JSON.strinify({name:name, password:password}));
+request.send(JSON.strinify({userid:userid, password:password}));
 };
