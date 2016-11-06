@@ -4,18 +4,30 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
+
+
+
+var config = {
+    user: 'smilewithanu2016',
+    database: 'smilewithanu2016',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
+};
 
 var app = express();
 app.use(morgan('combined'));
-app.use(body-parser.json());
+app.use(bodyParser.json());
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
+}));
 
-var config = {
-  host: 'PostgreSQL 9.6',
-  user: 'smilewithanu2016',
-  password: 'db-smilewithanu2016-62200',
-  database: 'smilewithanu2016',
-  port: '5432'
-};
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 
 var pool = new Pool(config);
 
@@ -53,9 +65,7 @@ res.send('User created successfully :' +name);
 
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
