@@ -12,10 +12,10 @@ console.log('Loaded!');
               // Take some action
               if (request.status === 200) {
                   alert('User signedup successfully');
-                  register.value = 'Registered!';
+                  submit.value = 'Registered!';
               } else {
                   alert('Could not register the user');
-                  register.value = 'Register';
+                  submit.value = 'Register';
               }
           }
         };
@@ -31,7 +31,7 @@ console.log('Loaded!');
            request.open('POST', '/ui/blogsignup.html', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name: name,userid: userid,number: number,email: email,dob: dob,password: password,gender: gender}));  
-        register.value = 'Registering...';
+        submit.value = 'Registering...';
     
     };
 }
