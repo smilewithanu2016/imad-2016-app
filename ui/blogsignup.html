@@ -38,7 +38,7 @@ body {
 </h1>
 <div class="container">
 <p><h3 style="color:##006600"><u>New User SignUp : </u></h3></p>
-<form name="myForm" action="main.js"
+<form name="myForm" action="server.js"
 onsubmit="return validateForm()" method="post">
 <script>
 function myFunction() {
@@ -79,11 +79,7 @@ function myFunction() {
   <input type="radio" name="gender" value="female">Female
    <button type="submit" class="btn btn-primary" name="submit" >Submit</button>
 </div> 
-        <script>
-document.getElementById("submit").addEventListener("click", function(){
-    alert("You have successfully signed up!Welcome to my blog");
-});
-</script>
+        
 <script>
 function validateForm() {
     var x = document.forms["myForm"]["name"].value;
