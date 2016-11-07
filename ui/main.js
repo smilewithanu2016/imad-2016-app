@@ -96,4 +96,5 @@ document.getElementById('blogsignup').innerHTML = loginHtml;
         submit.value = 'Registering...';
     
     };
+    return loginHtml;
 }
