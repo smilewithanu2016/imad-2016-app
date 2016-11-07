@@ -55,7 +55,9 @@ function validateForm() {
 
 </form>
 </div>
-`;
+`
+return loginHtml
+};
 document.getElementById('blogsignup').innerHTML = loginHtml;
 
  var submit = document.getElementById('submit');
