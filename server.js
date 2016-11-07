@@ -220,7 +220,7 @@ var userid = req.body.userid;
 var salt =  crypto.randomBytes(128).toString('hex');
 var dbString= hash(password,salt);
 
-pool.query("INSERT INTO 'signup' (name,number,email,dob,password,gender,userid) VALUES ($1,$2,$3,$4,$5,$6,$7)",[name,number,email,dob,dbString,gender,userid],function(err,result){
+pool.query("INSERT INTO 'signup' (name,userid.number.,email,dob,password,gender) VALUES ($1,$2,$3,$4,$5,$6,$7)",[name,userid,number,email,dob,dbString,gender],function(err,result){
 if(err){
 res.status(500),send(err.toString());
 }else {
