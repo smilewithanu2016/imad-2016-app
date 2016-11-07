@@ -2,6 +2,8 @@ console.log('Loaded!');
 
 function loadsignupform () {
     var loginHtml = `
+    <html>
+    <body>
 <form name="myForm" onsubmit="return validateForm()" method="post">
 <script>
 function myFunction() {
@@ -55,9 +57,10 @@ function validateForm() {
 
 </form>
 </div>
-`
-return loginHtml
-};
+</body>
+</html>
+`;
+
 document.getElementById('blogsignup').innerHTML = loginHtml;
 
  var submit = document.getElementById('submit');
@@ -87,7 +90,7 @@ document.getElementById('blogsignup').innerHTML = loginHtml;
         var gender = document.getElementById('password').value;
         var userid = document.getElementById('userid').value;
         
-           request.open('POST', '/server.js', true);
+           request.open('POST', '/blogsignup.html', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name: name,userid: userid,number: number,email: email,dob: dob,password: password,gender: gender}));  
         submit.value = 'Registering...';
