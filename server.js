@@ -13,7 +13,7 @@ var config = {
     database: 'smilewithanu2016',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: db-smilewithanu2016-62200
+    password: 'db-smilewithanu2016-62200'
 };
 
 var app = express();
