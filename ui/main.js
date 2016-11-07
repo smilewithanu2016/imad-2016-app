@@ -28,7 +28,7 @@ console.log('Loaded!');
         var gender = document.getElementById('password').value;
         var userid = document.getElementById('userid').value;
         
-           request.open('POST', '/blogsignup.html', true);
+           request.open('POST', '/ui/blogsignup.html', true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({name: name,userid: userid,number: number,email: email,dob: dob,password: password,gender: gender}));  
         register.value = 'Registering...';
