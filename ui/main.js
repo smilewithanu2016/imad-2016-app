@@ -4,6 +4,12 @@ function loadLoginForm () {
         <h3>Login/Register to unlock awesome features</h3>
         <input type="text" id="username" placeholder="username" />
         <input type="password" id="password" />
+         <input type="text" id="number" />
+          <input type="email" id="email" />
+           <input type="date" id="dob" />
+            <input type="radio" name="gender" value="male"/>Male
+  <input type="radio" name="gender" value="female"/>Female
+        
         <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
@@ -70,11 +76,19 @@ function loadLoginForm () {
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
+        var number = document.getElementById('number').value;
+        var email = document.getElementById('email').value;
+        var dob = document.getElementById('dob').value;
+        var gender = document.getElementById('gender').value;
         console.log(username);
         console.log(password);
+         console.log(number);
+        console.log(email);
+         console.log(dob);
+        console.log(gender);
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
+        request.send(JSON.stringify({username: username,password: password,number: number,email: email,dob: dob,gender: gender}));  
         register.value = 'Registering...';
     
     };
