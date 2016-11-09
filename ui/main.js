@@ -1,7 +1,7 @@
 
 function loadLoginForm () {
     var loginHtml = `
-        <h3>Login/Register to unlock awesome features</h3>
+        <h3>Signup for all features</h3>
         <label for="username">Username:</label>
         <input type="text" id="username" placeholder="username" ><br/><br/>
         <label for="username">password:</label>
