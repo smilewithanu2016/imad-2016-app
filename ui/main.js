@@ -2,11 +2,11 @@
 function loadLoginForm () {
     var loginHtml = `
         <h3>Login/Register to unlock awesome features</h3>
-        <input type="text" id="username" placeholder="username" />
-        <input type="password" id="password" />
-         <input type="text" id="number" />
-          <input type="email" id="email" />
-           <input type="date" id="dob" />
+        <input type="text" id="username" placeholder="username" value= "username">
+        <input type="password" id="password">
+         <input type="text" id="number">
+          <input type="email" id="email">
+           <input type="date" id="dob">
             <input type="radio" name="gender" value="male"/>Male
   <input type="radio" name="gender" value="female"/>Female
         
