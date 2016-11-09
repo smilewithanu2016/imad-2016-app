@@ -6,17 +6,8 @@ function loadLoginForm () {
         <input type="text" id="username" placeholder="username" ><br/><br/>
         <label for="username">password:</label>
         <input type="password" id="password"><br/><br/>
-        <label for="username">number:</label>
-         <input type="text" id="number"><br/><br/>
-         <label for="username">email:</label>
-          <input type="email" id="email"><br/><br/>
-          <label for="username">dob:</label>
-           <input type="date" id="dob"><br/><br/>
-           <label for="username">gender:</label>
-            <input type="radio" name="gender" value="male">
-  <input type="radio" name="gender" value="female"><br/><br/>
+    
         
-        <br/><br/>
         <input type="submit" id="login_btn" value="Login" />
         <input type="submit" id="register_btn" value="Register" />
         `;
@@ -82,19 +73,13 @@ function loadLoginForm () {
         // Make the request
         var username = document.getElementById('username').value;
         var password = document.getElementById('password').value;
-        var number = document.getElementById('number').value;
-        var email = document.getElementById('email').value;
-        var dob = document.getElementById('dob').value;
-        var gender = document.getElementById('gender').value;
+        
         console.log(username);
         console.log(password);
-         console.log(number);
-        console.log(email);
-         console.log(dob);
-        console.log(gender);
+         
         request.open('POST', '/create-user', true);
         request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username,password: password,number: number,email: email,dob: dob,gender: gender}));  
+        request.send(JSON.stringify({username: username,password: password}));  
         register.value = 'Registering...';
     
     };
