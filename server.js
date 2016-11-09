@@ -88,11 +88,16 @@ app.post('/create-user', function (req, res) {
    // username, password
    // {"username": "tanmai", "password": "password"}
    // JSON
-   var username = req.body.username;
-   var password = req.body.password;
+ var username = req.body.username;
+ var password = req.body.password;
+var number = req.body.number;
+var email = req.body.email;
+var dob = req.body.dob;
+var gender = req.body.gender;
+
    var salt = crypto.randomBytes(128).toString('hex');
    var dbString = hash(password, salt);
-   pool.query('INSERT INTO "user" (username, password) VALUES ($1, $2)', [username, dbString], function (err, result) {
+   pool.query('INSERT INTO "user" (username,password,number,email,dob,gender) VALUES ($1,$2,$3,$4,$5,$6)',[username,dbString,number,email,dob,gender],function(err,result) {
       if (err) {
           res.status(500).send(err.toString());
       } else {
